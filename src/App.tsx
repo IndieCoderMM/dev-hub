@@ -1,23 +1,19 @@
 import About from "./sections/About";
 import Download from "./sections/Download";
 import FAQ from "./sections/FAQ";
-import FeatureFlat from "./sections/FeatureFlat";
-import FeatureStack from "./sections/FeatureStack";
+import Features from "./sections/Features";
 import Footer from "./sections/Footer";
 import Pricing from "./sections/Pricing";
 import Hero from "./sections/Hero";
-import Overview from "./sections/Overview";
 import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <main className="bg-background min-h-screen font-montserrat text-white">
+    <main className="font-montserrat min-h-screen bg-background text-white">
       <Navbar />
       <Hero />
-      <Overview />
       <About />
-      <FeatureStack />
-      <FeatureFlat />
+      <Features />
       <Download />
       <Pricing />
       <FAQ />
