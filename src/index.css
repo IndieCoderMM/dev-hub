@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 220.8 88% 23%;
+    --background: 254 100% 14%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -16,7 +16,7 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 254 66% 39%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -45,7 +45,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 254 66% 39%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -71,6 +71,36 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground bg-black;
+    @apply bg-background bg-black text-foreground;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply px-4 py-12 sm:px-8 sm:py-24;
+  }
+
+  .padding-x {
+    @apply px-4 sm:px-16;
+  }
+
+  .padding-y {
+    @apply py-12 sm:py-24;
+  }
+
+  .padding-l {
+    @apply pl-8 sm:pl-16;
+  }
+
+  .padding-r {
+    @apply pr-8 sm:pr-16;
+  }
+
+  .padding-t {
+    @apply pt-12 sm:pt-24;
+  }
+
+  .padding-b {
+    @apply pb-12 sm:pb-24;
   }
 }
