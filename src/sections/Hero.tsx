@@ -1,3 +1,4 @@
+import { GooglePlay, Apple } from "@/assets/icons";
 import { Metrics } from "@/constants";
 
 const Hero = () => {
@@ -13,17 +14,24 @@ const Hero = () => {
       <div className="flex flex-col items-start gap-4 lg:flex-row">
         <button
           type="button"
-          className="flex min-w-[200px] flex-col rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
+          className="flex min-w-[200px] items-center gap-4 rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
         >
-          <span className="text-sm">Download on</span>
-          <span className="text-lg">Google Play</span>
+          <img src={Apple} alt="Google Play" className="h-8 w-8" />
+
+          <div className="flex flex-col">
+            <span className="text-sm">Download on</span>
+            <span className="text-lg">Apple Store</span>
+          </div>
         </button>
         <button
           type="button"
-          className="flex min-w-[200px] flex-col rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
+          className="flex min-w-[200px] items-center gap-4 rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
         >
-          <span className="text-sm">Download on</span>
-          <span className="text-lg">Google Play</span>
+          <img src={GooglePlay} alt="Google Play" className="h-8 w-8" />
+          <div className="flex flex-col">
+            <span className="text-sm">Download on</span>
+            <span className="text-lg">Google Play</span>
+          </div>
         </button>
       </div>
       {/* Metric grid with four columns */}
@@ -31,7 +39,7 @@ const Hero = () => {
         {Metrics.map((metric) => (
           <div
             key={metric.title}
-            className="flex flex-col items-center gap-8 rounded-md bg-blue-500 px-8 py-10"
+            className="flex flex-col items-center gap-2 rounded-md bg-accent px-8 py-10"
           >
             <span className="text-4xl font-bold">{metric.value}</span>
             <span className="text-2xl capitalize">{metric.title}</span>

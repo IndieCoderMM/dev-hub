@@ -8,15 +8,16 @@ const Download = () => {
       </h2>
       {/* socials icons */}
       <ul className="flex w-full flex-wrap gap-2">
-        {SocialLinks.map((social) => (
-          <li key={social.title}>
+        {SocialLinks.map(({ title, href, icon: Icon }) => (
+          <li key={title}>
             <a
-              href={social.href}
+              href={href}
               target="_blank"
               rel="noreferrer"
-              className="block h-10 w-10 rounded-full bg-white p-2"
+              className=" flex h-16 w-16 items-center justify-center rounded-full bg-primary p-2"
             >
-              <img src={"/vite.svg"} alt={social.title} />
+              <Icon size={30} />
+              <span className="sr-only">{title}</span>
             </a>
           </li>
         ))}

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        open ? "bg-indigo-500" : "bg-background"
+        open ? "bg-primary" : "bg-background"
       } padding-x relative w-full pb-8 pt-4 lg:py-16`}
     >
       <div className="flex items-center justify-between gap-4">
@@ -76,7 +76,7 @@ const Navbar = () => {
           }}
           initial="hidden"
           animate={open ? "visible" : "hidden"}
-          className={`absolute left-0 right-0 top-full bg-indigo-500`}
+          className={`absolute left-0 right-0 top-full bg-primary`}
         >
           <ul className="flex flex-1 flex-col gap-2 p-2">
             {NavLinks.map((link, index) => (
