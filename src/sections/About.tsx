@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import TitleText from "@/components/TitleText";
 import { Services } from "@/constants";
-import { fadeIn, slideIn, staggerContainer } from "@/lib/motion";
+import { fadeIn } from "@/lib/motion";
 
 const About = () => {
   return (
