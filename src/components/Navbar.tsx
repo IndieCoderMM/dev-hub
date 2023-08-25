@@ -1,19 +1,55 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  Variant,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 
 import { NavLinks } from "@/constants";
 import LanguageSelect from "./LanguageSelect";
 
+// Make header animation variant
+// initial normal
+// onScroll down fixed at top, bg-primary
+
+// onScroll up, normal
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { scrollY, scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
-    <header
+    <motion.header
+      variants={{
+        initial: {
+          position: "relative",
+          transition: { duration: 0.3 },
+        },
+        fixed: {
+          position: "fixed",
+          background: "var(hsl(--primary))",
+          transition: { duration: 0.3 },
+        },
+      }}
+      initial="initial"
+      animate={scrollY.get() > 0 ? "fixed" : "initial"}
       className={`${
         open ? "bg-primary" : "bg-background"
-      } padding-x relative w-full pb-8 pt-4 lg:py-16`}
+      } padding-x relative left-0 right-0 top-0 z-50 w-full pb-8 pt-4 lg:py-16`}
     >
+      <motion.div
+        style={{ scaleX }}
+        className="absolute left-0 top-0 h-1 w-full origin-left bg-accent"
+      />
       <div className="flex items-center justify-between gap-4">
-        <h1 className="text-3xl font-bold uppercase">CoinTrackr</h1>
+        <h1 className="text-lg font-bold uppercase lg:text-3xl">CoinTrackr</h1>
         {/* Main nav */}
         <nav className="hidden items-center gap-4 lg:flex ">
           <ul className="flex gap-2">
@@ -34,13 +70,13 @@ const Navbar = () => {
           </button>
         </nav>
         {/* Mobile buttons */}
-        <div className="flex gap-2 lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <LanguageSelect languages={["en", "mm", "jp"]} />
           <button
             type="button"
             aria-label="Toggle Menu"
             onClick={() => setOpen((prev) => !prev)}
-            className={`flex h-12 w-12 select-none flex-col items-center justify-center rounded-full lg:hidden`}
+            className={`flex h-10 w-10 select-none flex-col items-center justify-center rounded-full lg:hidden`}
           >
             <span
               className={`${
@@ -80,7 +116,7 @@ const Navbar = () => {
         >
           <ul className="flex flex-1 flex-col gap-2 p-2">
             {NavLinks.map((link, index) => (
-              <li key={index} className="flex bg-red-300">
+              <li key={index} className="flex ">
                 <a
                   href={link.href}
                   className="w-full bg-white px-4  py-2 text-primary"
@@ -90,14 +126,14 @@ const Navbar = () => {
               </li>
             ))}
             <li className="flex">
-              <a className="w-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700">
+              <a className="hover:bg w-full bg-accent px-4 py-2 text-white">
                 Download Now
               </a>
             </li>
           </ul>
         </motion.nav>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

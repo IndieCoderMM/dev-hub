@@ -1,4 +1,5 @@
 import { Service01, Service02, Service03 } from "@/assets/icons";
+import { Analysis, ExpenseCategory, Scanner } from "@/assets/images";
 import {
   FacebookIcon,
   GithubIcon,
@@ -88,6 +89,28 @@ export const Services = [
     image: Service03,
     description:
       "Access CoinTrackr from your smartphone or computer. Manage your finances on the go and have your data synchronized across devices.",
+  },
+];
+
+// Features
+export const KeyFeatures = [
+  {
+    title: "Smart Receipt Scanner",
+    description:
+      "Snap photos of receipts, and our AI extracts details and categorizes expenses for you.",
+    image: Scanner,
+  },
+  {
+    title: "Budgeting Made Easy",
+    description:
+      "AI analyzes your finances, offers personalized budget recommendations, and sends real-time alerts.",
+    image: Analysis,
+  },
+  {
+    title: "Expense Categorization",
+    description:
+      "AI automatically categorizes expenses, saving you time and keeping your records organized",
+    image: ExpenseCategory,
   },
 ];
 

@@ -14,7 +14,7 @@ const About = () => {
       <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
         {Services.map((service) => (
           <div
-            className="flex flex-col items-center rounded-xl border border-blue-100 p-8"
+            className="flex flex-col items-center rounded-xl border border-border p-8 text-center"
             key={service.title}
           >
             <div className="flex h-24 w-24 items-center justify-center">

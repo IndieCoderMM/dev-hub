@@ -40,10 +40,13 @@ const Guide = () => {
       {/* Steps grid */}
       <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
-          <div className="flex flex-col items-center p-8" key={step.title}>
-            <div className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 border-blue-100">
+          <div
+            className="flex flex-col items-center p-8 text-center"
+            key={step.title}
+          >
+            <div className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 border-border">
               <img src={step.image} alt={step.title} />
-              <div className="absolute -left-12 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-primary">
+              <div className="absolute -left-12 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-accent">
                 <span className="text-xl font-bold text-white">
                   {index + 1}
                 </span>
@@ -55,11 +58,11 @@ const Guide = () => {
         ))}
       </div>
       {/* Embed youtube video */}
-      <div className="relative overflow-hidden rounded-md">
+      <div className="relative rounded-md">
         <iframe
           width="560"
           height="315"
-          className="w-full"
+          className="max-w-full"
           src="https://www.youtube.com/embed/KCrXgy8qtjM?si=pQ7IYlwwVAvDSBxo"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
