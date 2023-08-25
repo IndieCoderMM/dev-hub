@@ -1,12 +1,11 @@
 import FaqAccordion from "@/components/FaqAccordion";
+import TitleText from "@/components/TitleText";
 import { FAQ as faq } from "@/constants";
 
 const FAQ = () => {
   return (
     <section className="padding space-y-10">
-      <h2 className="text-center text-4xl font-bold">
-        Frequently Asked Questions
-      </h2>
+      <TitleText text="Frequently Asked Questions" styles="text-center" />
       <p className="text-center leading-loose">
         Here are some of our FAQs. If you have any other questions you'd like
         answered please feel free to email us.

@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import { SocialLinks } from "@/constants";
 import { Send } from "lucide-react";
+import { sphereVariant, staggerContainer } from "@/lib/motion";
 
 const Footer = () => {
   return (
@@ -35,9 +37,22 @@ const Footer = () => {
           </a>
         </div>
         {/* Social icons */}
-        <ul className="mt-10 flex items-center justify-center gap-4">
+        <motion.ul
+          variants={staggerContainer(0.1, 0.9)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{
+            once: true,
+            amount: 0.25,
+          }}
+          className="mt-10 flex items-center justify-center gap-4"
+        >
           {SocialLinks.map(({ href, title, icon: Icon }, index) => (
-            <li key={index}>
+            <motion.li
+              variants={sphereVariant("left", 0.5 * index, 0.85)}
+              whileHover={{ y: -5 }}
+              key={index}
+            >
               <a
                 href={href}
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl"
@@ -45,9 +60,9 @@ const Footer = () => {
                 <Icon />
                 <span className="sr-only">{title}</span>
               </a>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
       <Separator />
 

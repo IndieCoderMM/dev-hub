@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  Variant,
   motion,
   useMotionValueEvent,
   useScroll,
@@ -10,14 +9,24 @@ import {
 import { NavLinks } from "@/constants";
 import LanguageSelect from "./LanguageSelect";
 
-// Make header animation variant
-// initial normal
-// onScroll down fixed at top, bg-primary
-
-// onScroll up, normal
+const ScrollHeaderVariants = {
+  idle: {
+    backgroundColor: "hsl(283 71% 7%)",
+    transition: {
+      duration: 0.8,
+    },
+  },
+  fixed: {
+    backgroundColor: "hsl(313 70% 28%)",
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
   const { scrollY, scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -25,24 +34,23 @@ const Navbar = () => {
     restDelta: 0.001,
   });
 
+  useMotionValueEvent(scrollY, "change", (latestScrollY) => {
+    if (latestScrollY > 200) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  });
+
   return (
     <motion.header
-      variants={{
-        initial: {
-          position: "relative",
-          transition: { duration: 0.3 },
-        },
-        fixed: {
-          position: "fixed",
-          background: "var(hsl(--primary))",
-          transition: { duration: 0.3 },
-        },
-      }}
+      variants={ScrollHeaderVariants}
       initial="initial"
-      animate={scrollY.get() > 0 ? "fixed" : "initial"}
+      animate={scrolling ? "fixed" : "initial"}
+      layout
       className={`${
         open ? "bg-primary" : "bg-background"
-      } padding-x relative left-0 right-0 top-0 z-50 w-full pb-8 pt-4 lg:py-16`}
+      } padding-x fixed left-0 right-0 top-0 z-50 w-full py-2 lg:py-16`}
     >
       <motion.div
         style={{ scaleX }}

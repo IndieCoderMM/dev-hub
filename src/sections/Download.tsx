@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import { GooglePlay, Apple } from "@/assets/icons";
 import { SocialLinks } from "@/constants";
+import { sphereVariant, staggerContainer } from "@/lib/motion";
 
 const Download = () => {
   return (
@@ -8,9 +10,22 @@ const Download = () => {
         Get CoinTrackr and join our community
       </h2>
       {/* socials icons */}
-      <ul className="flex w-full flex-wrap gap-2">
-        {SocialLinks.map(({ title, href, icon: Icon }) => (
-          <li key={title}>
+      <motion.ul
+        variants={staggerContainer(0.1, 0.9)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{
+          once: true,
+          amount: 0.25,
+        }}
+        className="flex w-full flex-wrap gap-2"
+      >
+        {SocialLinks.map(({ title, href, icon: Icon }, index) => (
+          <motion.li
+            variants={sphereVariant("left", 0.5 * index, 0.85)}
+            whileHover={{ y: -5 }}
+            key={title}
+          >
             <a
               href={href}
               target="_blank"
@@ -20,9 +35,9 @@ const Download = () => {
               <Icon size={30} />
               <span className="sr-only">{title}</span>
             </a>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
       <p className="text-2xl font-medium">
         Download our app now and get started.
       </p>

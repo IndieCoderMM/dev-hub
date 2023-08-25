@@ -29,20 +29,24 @@ export const NavLinks = [
 // Metrics about expense tracker app
 export const Metrics = [
   {
-    value: "1M+",
+    value: 10,
+    unit: "M+",
     title: "Downloads",
   },
   {
-    value: "100K+",
+    value: 57,
+    unit: "K+",
     title: "Active Users",
   },
   {
-    value: "4.8",
-    title: "Rating",
+    value: 4,
+    unit: "K+",
+    title: "Reviews",
   },
   {
-    value: "100+",
-    title: "Reviews",
+    value: 12,
+    unit: "+",
+    title: "Countries",
   },
 ];
 

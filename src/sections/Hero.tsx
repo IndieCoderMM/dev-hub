@@ -1,9 +1,10 @@
 import { GooglePlay, Apple } from "@/assets/icons";
+import AnimatedNumber from "@/components/AnimatedNumber";
 import { Metrics } from "@/constants";
 
 const Hero = () => {
   return (
-    <section className="padding flex min-h-screen flex-col gap-10">
+    <section className="padding mt-20 flex min-h-screen flex-col gap-10">
       <h1 className="text-5xl font-bold">
         Master Your Finances with CoinTrackr
       </h1>
@@ -41,7 +42,10 @@ const Hero = () => {
             key={metric.title}
             className="flex flex-col items-center gap-2 rounded-md bg-primary px-8 py-10"
           >
-            <span className="text-4xl font-bold">{metric.value}</span>
+            <div className="text-4xl font-bold">
+              <AnimatedNumber value={metric.value} />
+              <span className="text-2xl">{metric.unit}</span>
+            </div>
             <span className="text-2xl capitalize">{metric.title}</span>
           </div>
         ))}

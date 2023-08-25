@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import {
   AtmCard,
   BudgetInsight,
@@ -45,7 +47,17 @@ const Guide = () => {
             key={step.title}
           >
             <div className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full border-2 border-border">
-              <img src={step.image} alt={step.title} />
+              <motion.img
+                initial={{ scale: 0 }}
+                transition={{
+                  duration: 0.75,
+                  type: "spring",
+                }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                src={step.image}
+                alt={step.title}
+              />
               <div className="absolute -left-12 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-accent">
                 <span className="text-xl font-bold text-white">
                   {index + 1}
