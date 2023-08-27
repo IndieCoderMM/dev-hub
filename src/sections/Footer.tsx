@@ -21,20 +21,23 @@ const Footer = () => {
               placeholder="Your email"
               className="flex-1 bg-transparent text-lg outline-none"
             />
-            <button type="submit" className="rounded-md bg-accent p-2">
-              <span className="sr-only">Subscribe</span>
+            <button
+              type="submit"
+              className="flex items-center gap-1 rounded-md bg-accent p-2 transition-all hover:scale-105"
+            >
               <Send />
+              <span className="hidden lg:inline-block">Subscribe</span>
             </button>
           </div>
         </form>
       </div>
       <div className="max-container mx-auto flex flex-col justify-between lg:flex-row">
         <div className="mt-20 flex h-5 items-center justify-center gap-4">
-          <a href="#" className="text-xl">
+          <a href="#" className="text-xl transition-colors hover:text-accent">
             About
           </a>
           <Separator orientation="vertical" />
-          <a href="#" className="text-xl">
+          <a href="#" className="text-xl transition-colors hover:text-accent">
             Contact
           </a>
         </div>
@@ -69,14 +72,14 @@ const Footer = () => {
       <Separator />
       <div className="max-container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row">
         <p className="text-center text-lg">
-          &copy; {new Date().getFullYear()} All rights reserved.
+          &copy; {new Date().getFullYear()} CoinTrackr. All rights reserved.
         </p>
         <div className="flex h-5 items-center justify-center gap-4">
-          <a href="#" className="text-lg">
+          <a href="#" className="text-lg transition-colors hover:text-accent">
             Terms of Service
           </a>
           <Separator orientation="vertical" />
-          <a href="#" className="text-lg">
+          <a href="#" className="text-lg transition-colors hover:text-accent">
             Privacy Policy
           </a>
         </div>

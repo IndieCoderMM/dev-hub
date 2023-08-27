@@ -58,7 +58,9 @@ const Navbar = () => {
       />
       {/* Main nav */}
       <div className="max-container mx-auto flex items-center justify-between gap-4">
-        <h1 className="text-lg font-bold uppercase lg:text-3xl">CoinTrackr</h1>
+        <h1 className="text-lg font-bold uppercase lg:text-3xl">
+          <a href="/">CoinTrackr</a>
+        </h1>
         <nav className="hidden items-center gap-4 text-xl lg:flex">
           <ul className="flex items-center justify-center gap-2 lg:gap-8">
             {NavLinks.map((link, index) => (
@@ -70,12 +72,12 @@ const Navbar = () => {
             ))}
           </ul>
           <LanguageSelect languages={["en", "mm", "jp"]} />
-          <button
-            type="button"
+          <a
+            href="#download"
             className="rounded-full bg-accent px-4 py-2 text-xl font-bold text-background transition-all duration-150 hover:translate-y-[-2px] hover:brightness-110 lg:px-8 lg:py-4"
           >
             Download Now
-          </button>
+          </a>
         </nav>
         {/* Mobile buttons */}
         <div className="flex items-center gap-2 lg:hidden">
@@ -134,7 +136,10 @@ const Navbar = () => {
               </li>
             ))}
             <li className="flex">
-              <a className="hover:bg w-full bg-accent px-4 py-2 text-white">
+              <a
+                href="#download"
+                className="hover:bg w-full bg-accent px-4 py-2 text-white"
+              >
                 Download Now
               </a>
             </li>

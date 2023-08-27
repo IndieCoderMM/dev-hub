@@ -2,11 +2,14 @@ import { motion } from "framer-motion";
 import { GooglePlay, Apple } from "@/assets/icons";
 import { SocialLinks } from "@/constants";
 import { sphereVariant, staggerContainer } from "@/lib/motion";
-import { CommunityImg, HeroImg3 } from "@/assets/images";
+import { CommunityImg } from "@/assets/images";
 
 const Download = () => {
   return (
-    <section className="padding grid place-items-center gap-4 bg-secondary xl:grid-cols-2">
+    <section
+      id="download"
+      className="padding grid place-items-center gap-4 bg-secondary xl:grid-cols-2"
+    >
       <div className="hidden self-center rounded-md bg-primary p-8 xl:block">
         <img
           src={CommunityImg}
@@ -54,7 +57,7 @@ const Download = () => {
         <div className="flex flex-col items-start gap-4 lg:flex-row">
           <button
             type="button"
-            className="flex min-w-[250px] items-center gap-4 rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
+            className="flex min-w-[250px] items-center gap-4 rounded-md border-2 border-white px-8 py-2 text-white transition-all hover:translate-y-[-2px] hover:shadow-md hover:shadow-accent hover:brightness-110"
           >
             <img src={Apple} alt="Google Play" className="h-8 w-8" />
 
@@ -65,7 +68,7 @@ const Download = () => {
           </button>
           <button
             type="button"
-            className="flex min-w-[250px] items-center gap-4 rounded-md border-2 border-white px-8 py-1 text-white hover:bg-white hover:text-blue-500"
+            className="flex min-w-[250px] items-center gap-4 rounded-md border-2 border-white px-8 py-2 text-white transition-all hover:translate-y-[-2px] hover:shadow-md hover:shadow-accent hover:brightness-110"
           >
             <img src={GooglePlay} alt="Google Play" className="h-8 w-8" />
             <div className="flex flex-col">

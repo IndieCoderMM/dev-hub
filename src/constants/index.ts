@@ -1,11 +1,19 @@
 import { Service01, Service02, Service03 } from "@/assets/icons";
 import { Analysis, ExpenseCategory, Scanner } from "@/assets/images";
+
 import {
   FacebookIcon,
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
 } from "lucide-react";
+
+import {
+  AtmCard,
+  BudgetInsight,
+  MobileReceipt,
+  VerifiedAccount,
+} from "@/assets/icons";
 
 export const NavLinks = [
   {
@@ -17,8 +25,8 @@ export const NavLinks = [
     href: "#features",
   },
   {
-    title: "Pricing",
-    href: "#pricing",
+    title: "Guide",
+    href: "#guide",
   },
   {
     title: "FAQ",
@@ -29,17 +37,17 @@ export const NavLinks = [
 // Metrics about expense tracker app
 export const Metrics = [
   {
-    value: 10,
+    value: 20,
     unit: "M+",
     title: "Downloads",
   },
   {
-    value: 57,
+    value: 125,
     unit: "K+",
     title: "Active Users",
   },
   {
-    value: 4,
+    value: 45,
     unit: "K+",
     title: "Reviews",
   },
@@ -115,6 +123,32 @@ export const KeyFeatures = [
     description:
       "AI automatically categorizes expenses, saving you time and keeping your records organized",
     image: ExpenseCategory,
+  },
+];
+
+// Guide steps
+export const GuideSteps = [
+  {
+    title: "Sign Up",
+    description: "Create your CoinTrackr account in seconds.",
+    image: VerifiedAccount,
+  },
+  {
+    title: "Connect your accounts",
+    description: "Link your bank and credit card accounts to CoinTrackr.",
+    image: AtmCard,
+  },
+  {
+    title: "Start tracking",
+    description:
+      "Snap photos of receipts, and let our AI handle the rest. Monitor your expenses and budget effortlessly.",
+    image: MobileReceipt,
+  },
+  {
+    title: "Get Insights",
+    description:
+      "Explore personalized financial insights, set goals, and take control of your financial future.",
+    image: BudgetInsight,
   },
 ];
 

@@ -7,6 +7,7 @@ import VerifiedAccount from "./verified-account.png";
 import MobileReceipt from "./mobile-receipt.png";
 import BudgetInsight from "./budget-insight.png";
 import AtmCard from "./atm-card.png";
+import PlayFill from "./play-fill.svg";
 
 export {
   GooglePlay,
@@ -17,5 +18,6 @@ export {
   VerifiedAccount,
   MobileReceipt,
   BudgetInsight,
+  PlayFill,
   AtmCard,
 };

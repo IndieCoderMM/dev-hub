@@ -1,17 +1,17 @@
 import Scanner from "./online-payment.png";
 import Analysis from "./analysis.png";
 import ExpenseCategory from "./expense-category.png";
-import HeroImg from "./hero.png";
-import HeroImg2 from "./hero2.png";
-import HeroImg3 from "./hero3.png";
+import HeroImg from "./hero-img.png";
 import CommunityImg from "./community.png";
+import ExpenseManagement from "./expense-management.png";
+import BudgetManagement from "./budget-management.png";
 
 export {
   Scanner,
   Analysis,
   ExpenseCategory,
   HeroImg,
-  HeroImg2,
-  HeroImg3,
+  ExpenseManagement,
+  BudgetManagement,
   CommunityImg,
 };

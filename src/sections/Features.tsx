@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { KeyFeatures } from "@/constants";
-import { fadeIn } from "@/lib/motion";
+import { fadeIn, staggerContainer } from "@/lib/motion";
 import TitleText from "@/components/TitleText";
 
 const Features = () => {
   return (
-    <section className="padding max-container mx-auto space-y-10">
+    <section id="features" className="padding max-container mx-auto space-y-10">
       <TitleText
         text="Your all-in-one solution for expense management"
         styles="text-center"
@@ -15,17 +15,19 @@ const Features = () => {
         informed decisions and achieve your financial goals.
       </p>
       {/* Key features grid */}
-      <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
-        {KeyFeatures.map((feature) => (
+      <motion.div
+        variants={staggerContainer(0.5, 0)}
+        initial="hidden"
+        whileInView="show"
+        className="mt-16 grid grid-cols-1 gap-12 xl:grid-cols-3"
+      >
+        {KeyFeatures.map((feature, index) => (
           <motion.div
-            variants={fadeIn("up", "tween", 0.1, 0.5)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ amount: 0.25, once: true }}
+            variants={fadeIn("up", "tween", 0.3 * index, 0.5)}
             className="flex flex-col items-center gap-4 rounded-xl p-4 text-center"
             key={feature.title}
           >
-            <div className="flex h-auto w-full items-center justify-center rounded-lg bg-primary lg:h-full">
+            <div className="flex h-auto w-full items-center justify-center rounded-lg bg-primary md:w-auto xl:min-h-[420px]">
               <img
                 src={feature.image}
                 alt={feature.title}
@@ -38,7 +40,7 @@ const Features = () => {
             <p className="text-center">{feature.description}</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

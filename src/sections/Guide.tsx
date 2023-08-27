@@ -1,41 +1,12 @@
 import { motion } from "framer-motion";
 
-import {
-  AtmCard,
-  BudgetInsight,
-  MobileReceipt,
-  VerifiedAccount,
-} from "@/assets/icons";
-import { staggerContainer } from "@/lib/motion";
-
-const steps = [
-  {
-    title: "Sign Up",
-    description: "Create your CoinTrackr account in seconds.",
-    image: VerifiedAccount,
-  },
-  {
-    title: "Connect your accounts",
-    description: "Link your bank and credit card accounts to CoinTrackr.",
-    image: AtmCard,
-  },
-  {
-    title: "Start tracking",
-    description:
-      "Snap photos of receipts, and let our AI handle the rest. Monitor your expenses and budget effortlessly.",
-    image: MobileReceipt,
-  },
-  {
-    title: "Get Insights",
-    description:
-      "Explore personalized financial insights, set goals, and take control of your financial future.",
-    image: BudgetInsight,
-  },
-];
+import { PlayFill } from "@/assets/icons";
+import { BudgetManagement } from "@/assets/images";
+import { GuideSteps } from "@/constants";
 
 const Guide = () => {
   return (
-    <section className="padding bg-secondary">
+    <section id="guide" className="padding bg-secondary">
       <div className="max-container space-y-8">
         <h2 className="text-center text-4xl font-bold">Here's how it works</h2>
         <p className="text-center leading-loose">
@@ -43,7 +14,7 @@ const Guide = () => {
         </p>
         {/* Steps grid */}
         <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
+          {GuideSteps.map((step, index) => (
             <div
               className="flex flex-col items-center p-8 text-center"
               key={step.title}
@@ -73,7 +44,43 @@ const Guide = () => {
           ))}
         </div>
         {/* Embed youtube video */}
-        <div className="relative mx-auto w-full rounded-md bg-red-300 lg:h-[500px] lg:w-[60%]"></div>
+        <div className="relative mx-auto h-auto w-full overflow-hidden rounded-lg lg:h-[540px] lg:w-[60%]">
+          <img
+            src={BudgetManagement}
+            alt="Budget Management"
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-indigo-400/50">
+            <div className="relative h-20 w-20 rounded-full lg:h-24 lg:w-24">
+              {/* Pulsing circle */}
+              <motion.div
+                variants={{
+                  initial: {
+                    scale: 1,
+                  },
+                  animate: {
+                    scale: 1.3,
+                  },
+                }}
+                className="absolute bottom-0 left-0 right-0 top-0 rounded-full bg-red-400/50"
+                animate="animate"
+                transition={{
+                  repeat: Infinity,
+                  duration: 1,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              ></motion.div>
+
+              <a
+                href="#"
+                className="absolute z-20 flex h-20 w-20 items-center justify-center rounded-full bg-red-600 lg:h-24 lg:w-24"
+              >
+                <img src={PlayFill} alt="Play" className="h-12 w-12 " />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

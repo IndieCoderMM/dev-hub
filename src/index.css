@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* #020f31 */
-    --background: 255 71% 15%;
+    --background: 254 65% 22%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -79,7 +79,19 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground lg:text-lg;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[6px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent;
   }
 }
 
@@ -92,9 +104,9 @@
   .hero-gradient {
     background: linear-gradient(
       97.86deg,
-      #301d66 0%,
-      #42278b 53.65%,
-      #301d66 100%
+      #1c113b 0%,
+      #2e1b64 53.65%,
+      #1c113b 100%
     );
   }
 }

@@ -4,7 +4,7 @@ import { FAQ as faq } from "@/constants";
 
 const FAQ = () => {
   return (
-    <section className="padding max-container mx-auto space-y-10">
+    <section id="faq" className="padding max-container mx-auto space-y-10">
       <TitleText text="Frequently Asked Questions" styles="text-center" />
       <p className="text-center leading-loose">
         Here are some of our FAQs. If you have any other questions you'd like
