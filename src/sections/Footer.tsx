@@ -6,13 +6,15 @@ import { sphereVariant, staggerContainer } from "@/lib/motion";
 
 const Footer = () => {
   return (
-    <footer className="padding space-y-10">
-      <div className="w-full space-y-8 rounded-md bg-primary px-4 py-12">
+    <footer className="padding space-y-10 bg-secondary lg:relative lg:mt-20">
+      <div className="left-1/2 top-0 mx-auto w-full space-y-8 rounded-md bg-primary px-4 py-12 lg:absolute lg:w-[60%] lg:-translate-x-1/2 lg:-translate-y-1/2">
         <h2 className="text-center text-4xl font-bold">
           Subscribe to our NewsLetter!
         </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
-        <form action="" className="w-full">
+        <p className="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        </p>
+        <form action="" className="mx-auto w-full lg:w-[60%]">
           <div className="flex w-full items-center rounded-md border border-white py-2 pl-4 pr-2">
             <input
               type="email"
@@ -26,7 +28,7 @@ const Footer = () => {
           </div>
         </form>
       </div>
-      <div>
+      <div className="max-container mx-auto flex flex-col justify-between lg:flex-row">
         <div className="mt-20 flex h-5 items-center justify-center gap-4">
           <a href="#" className="text-xl">
             About
@@ -65,18 +67,19 @@ const Footer = () => {
         </motion.ul>
       </div>
       <Separator />
-
-      <p className="text-center text-lg">
-        &copy; {new Date().getFullYear()} All rights reserved.
-      </p>
-      <div className="flex h-5 items-center justify-center gap-4">
-        <a href="#" className="text-lg">
-          Terms of Service
-        </a>
-        <Separator orientation="vertical" />
-        <a href="#" className="text-lg">
-          Privacy Policy
-        </a>
+      <div className="max-container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row">
+        <p className="text-center text-lg">
+          &copy; {new Date().getFullYear()} All rights reserved.
+        </p>
+        <div className="flex h-5 items-center justify-center gap-4">
+          <a href="#" className="text-lg">
+            Terms of Service
+          </a>
+          <Separator orientation="vertical" />
+          <a href="#" className="text-lg">
+            Privacy Policy
+          </a>
+        </div>
       </div>
     </footer>
   );

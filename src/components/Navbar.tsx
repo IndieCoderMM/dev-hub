@@ -11,13 +11,13 @@ import LanguageSelect from "./LanguageSelect";
 
 const ScrollHeaderVariants = {
   idle: {
-    backgroundColor: "hsl(283 71% 7%)",
     transition: {
       duration: 0.8,
     },
   },
   fixed: {
-    backgroundColor: "hsl(313 70% 28%)",
+    backgroundColor: "hsl(263 86% 45%)",
+    boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
     transition: {
       duration: 0.8,
     },
@@ -35,7 +35,7 @@ const Navbar = () => {
   });
 
   useMotionValueEvent(scrollY, "change", (latestScrollY) => {
-    if (latestScrollY > 200) {
+    if (latestScrollY > 100) {
       setScrolling(true);
     } else {
       setScrolling(false);
@@ -49,18 +49,18 @@ const Navbar = () => {
       animate={scrolling ? "fixed" : "initial"}
       layout
       className={`${
-        open ? "bg-primary" : "bg-background"
-      } padding-x fixed left-0 right-0 top-0 z-50 w-full py-2 lg:py-16`}
+        open ? "bg-primary" : "bg-transparent"
+      } padding-x fixed left-0 right-0 top-0 z-50 w-full py-2 lg:py-4`}
     >
       <motion.div
         style={{ scaleX }}
         className="absolute left-0 top-0 h-1 w-full origin-left bg-accent"
       />
-      <div className="flex items-center justify-between gap-4">
+      {/* Main nav */}
+      <div className="max-container mx-auto flex items-center justify-between gap-4">
         <h1 className="text-lg font-bold uppercase lg:text-3xl">CoinTrackr</h1>
-        {/* Main nav */}
-        <nav className="hidden items-center gap-4 lg:flex ">
-          <ul className="flex gap-2">
+        <nav className="hidden items-center gap-4 text-xl lg:flex">
+          <ul className="flex items-center justify-center gap-2 lg:gap-8">
             {NavLinks.map((link, index) => (
               <li key={index}>
                 <a href={link.href} key={index}>
@@ -69,10 +69,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div>EN</div>
+          <LanguageSelect languages={["en", "mm", "jp"]} />
           <button
             type="button"
-            className="rounded-full bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            className="rounded-full bg-accent px-4 py-2 text-xl font-bold text-background transition-all duration-150 hover:translate-y-[-2px] hover:brightness-110 lg:px-8 lg:py-4"
           >
             Download Now
           </button>

@@ -4,14 +4,14 @@ import { FAQ as faq } from "@/constants";
 
 const FAQ = () => {
   return (
-    <section className="padding space-y-10">
+    <section className="padding max-container mx-auto space-y-10">
       <TitleText text="Frequently Asked Questions" styles="text-center" />
       <p className="text-center leading-loose">
         Here are some of our FAQs. If you have any other questions you'd like
         answered please feel free to email us.
       </p>
 
-      <div className="flex flex-col gap-4">
+      <div className="mx-auto flex w-full flex-col gap-4 lg:w-[60%]">
         {faq.map((item, index) => (
           <FaqAccordion
             key={index}

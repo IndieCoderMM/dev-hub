@@ -5,7 +5,7 @@ import TitleText from "@/components/TitleText";
 
 const Features = () => {
   return (
-    <section className="padding space-y-10">
+    <section className="padding max-container mx-auto space-y-10">
       <TitleText
         text="Your all-in-one solution for expense management"
         styles="text-center"
@@ -25,7 +25,7 @@ const Features = () => {
             className="flex flex-col items-center gap-4 rounded-xl p-4 text-center"
             key={feature.title}
           >
-            <div className="flex items-center justify-center rounded-lg bg-primary">
+            <div className="flex h-auto w-full items-center justify-center rounded-lg bg-primary lg:h-full">
               <img
                 src={feature.image}
                 alt={feature.title}

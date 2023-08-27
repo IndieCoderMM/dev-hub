@@ -13,7 +13,7 @@ const FaqAccordion = ({
   answer: string;
 }) => {
   return (
-    <div className="rounded-md bg-primary p-4">
+    <div className="rounded-md bg-primary p-4 pl-10">
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-xl">{question}</AccordionTrigger>

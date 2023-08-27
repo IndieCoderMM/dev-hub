@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 const AnimatedNumber = ({ value }: { value: number }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
+  const springValue = useSpring(motionValue, { duration: 5000 });
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {

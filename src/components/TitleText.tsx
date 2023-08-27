@@ -8,7 +8,7 @@ const TitleText = ({ text, styles = "" }: { text: string; styles: string }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
-      className={`text-4xl font-bold ${styles}`}
+      className={`text-4xl font-bold lg:text-5xl ${styles}`}
     >
       {text}
     </motion.h2>
