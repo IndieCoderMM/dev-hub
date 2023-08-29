@@ -5,6 +5,7 @@ import HeroImg from "./hero-img.png";
 import CommunityImg from "./community.png";
 import ExpenseManagement from "./expense-management.png";
 import BudgetManagement from "./budget-management.png";
+import Logo from "./logo.png";
 
 export {
   Scanner,
@@ -14,4 +15,5 @@ export {
   ExpenseManagement,
   BudgetManagement,
   CommunityImg,
+  Logo,
 };

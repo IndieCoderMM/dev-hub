@@ -77,6 +77,8 @@ const Footer = () => {
             >
               <a
                 href={href}
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl"
               >
                 <Icon />

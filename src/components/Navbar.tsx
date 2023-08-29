@@ -8,6 +8,7 @@ import {
 
 import { NavLinks } from "@/constants";
 import LanguageSelect from "./LanguageSelect";
+import { Logo } from "@/assets/images";
 
 const ScrollHeaderVariants = {
   idle: {
@@ -59,7 +60,14 @@ const Navbar = () => {
       {/* Main nav */}
       <div className="max-container mx-auto flex items-center justify-between gap-4">
         <h1 className="text-lg font-bold uppercase lg:text-3xl">
-          <a href="/">Billio</a>
+          <a href="/" className="flex items-center gap-1">
+            <img
+              src={Logo}
+              alt="Billio"
+              className="h-16 w-16 lg:h-20 lg:w-20 "
+            />
+            Billio
+          </a>
         </h1>
         <nav className="hidden items-center gap-4 text-xl lg:flex">
           <ul className="flex items-center justify-center gap-2 lg:gap-8">
@@ -130,6 +138,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   className="w-full bg-white px-4  py-2 text-primary"
+                  onClick={() => setOpen(false)}
                 >
                   <span className="font-bold">{link.title}</span>
                 </a>
@@ -139,6 +148,7 @@ const Navbar = () => {
               <a
                 href="#download"
                 className="hover:bg w-full bg-accent px-4 py-2 text-white"
+                onClick={() => setOpen(false)}
               >
                 Download Now
               </a>
