@@ -52,7 +52,7 @@ export const fadeIn = (
       type,
       delay,
       duration,
-      ease: "easeIn",
+      ease: "linear",
     },
   },
   exit: {
@@ -90,16 +90,6 @@ export const sphereVariant = (
     },
   },
 });
-
-export const textContainer = {
-  hidden: {
-    opacity: 0,
-  },
-  show: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.05 },
-  }),
-};
 
 export const textVariant = {
   hidden: {

@@ -3,8 +3,18 @@ import { Separator } from "@/components/ui/separator";
 import { SocialLinks } from "@/constants";
 import { Send } from "lucide-react";
 import { sphereVariant, staggerContainer } from "@/lib/motion";
+import { useToast } from "@/components/ui/use-toast";
 
 const Footer = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Subscription Successful!",
+      description: "You have successfully subscribed to our newsletter.",
+    });
+  };
   return (
     <footer className="padding space-y-10 bg-secondary lg:relative lg:mt-20">
       <div className="left-1/2 top-0 mx-auto w-full space-y-8 rounded-md bg-primary px-4 py-12 lg:absolute lg:w-[60%] lg:-translate-x-1/2 lg:-translate-y-1/2">
@@ -12,9 +22,10 @@ const Footer = () => {
           Subscribe to our NewsLetter!
         </h2>
         <p className="text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          Join our newsletter to receive the latest updates, financial tips, and
+          exclusive offers directly in your inbox.
         </p>
-        <form action="" className="mx-auto w-full lg:w-[60%]">
+        <form onSubmit={handleSubmit} className="mx-auto w-full lg:w-[60%]">
           <div className="flex w-full items-center rounded-md border border-white py-2 pl-4 pr-2">
             <input
               type="email"
@@ -33,11 +44,17 @@ const Footer = () => {
       </div>
       <div className="max-container mx-auto flex flex-col justify-between lg:flex-row">
         <div className="mt-20 flex h-5 items-center justify-center gap-4">
-          <a href="#" className="text-xl transition-colors hover:text-accent">
+          <a
+            href="#about"
+            className="text-xl transition-colors hover:text-accent"
+          >
             About
           </a>
           <Separator orientation="vertical" />
-          <a href="#" className="text-xl transition-colors hover:text-accent">
+          <a
+            href="mailto:support@cointrackrapp.com"
+            className="text-xl transition-colors hover:text-accent"
+          >
             Contact
           </a>
         </div>
@@ -72,7 +89,8 @@ const Footer = () => {
       <Separator />
       <div className="max-container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row">
         <p className="text-center text-lg">
-          &copy; {new Date().getFullYear()} CoinTrackr. All rights reserved.
+          Copyright &copy; {new Date().getFullYear()} CoinTrackr. All rights
+          reserved.
         </p>
         <div className="flex h-5 items-center justify-center gap-4">
           <a href="#" className="text-lg transition-colors hover:text-accent">

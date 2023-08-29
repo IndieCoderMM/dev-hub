@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { PlayFill } from "@/assets/icons";
 import { BudgetManagement } from "@/assets/images";
 import { GuideSteps } from "@/constants";
+import { fadeIn } from "@/lib/motion";
 
 const Guide = () => {
   return (
@@ -44,7 +45,16 @@ const Guide = () => {
           ))}
         </div>
         {/* Embed youtube video */}
-        <div className="relative mx-auto h-auto w-full overflow-hidden rounded-lg lg:h-[540px] lg:w-[60%]">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{
+            once: false,
+            amount: 0.25,
+          }}
+          className="relative mx-auto h-[250px] w-full overflow-hidden rounded-lg md:h-[400px] lg:h-[540px] lg:w-[80%] xl:w-[60%]"
+        >
           <img
             src={BudgetManagement}
             alt="Budget Management"
@@ -73,14 +83,14 @@ const Guide = () => {
               ></motion.div>
 
               <a
-                href="#"
+                href="#guide"
                 className="absolute z-20 flex h-20 w-20 items-center justify-center rounded-full bg-red-600 lg:h-24 lg:w-24"
               >
                 <img src={PlayFill} alt="Play" className="h-12 w-12 " />
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

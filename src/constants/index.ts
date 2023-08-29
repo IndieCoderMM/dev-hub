@@ -172,7 +172,7 @@ export const FAQ = [
   {
     question: "Does CoinTrackr offer customer support?",
     answer:
-      "Absolutely. Our customer support team is available 24/7 to assist you with any questions or issues you may have. Feel free to reach out to us via email at support@smartspendapp.com or through our in-app help center.",
+      "Absolutely. Our customer support team is available 24/7 to assist you with any questions or issues you may have. Feel free to reach out to us via email at support@cointrackrapp.com or through our in-app help center.",
   },
   {
     question: "What if I need help with budgeting or financial advice?",

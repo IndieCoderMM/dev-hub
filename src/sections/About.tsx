@@ -47,7 +47,7 @@ const About = () => {
           ))}
         </motion.div>
         <motion.div
-          variants={fadeIn("left", "tween", 0, 0.75)}
+          variants={fadeIn("right", "tween", 0.2, 0.75)}
           initial="hidden"
           whileInView={"show"}
           className="hidden h-full w-full xl:block"

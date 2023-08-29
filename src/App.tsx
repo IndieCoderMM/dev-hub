@@ -6,10 +6,12 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
 import Guide from "./sections/Guide";
+import { Toaster } from "./components/ui/toaster";
+import ScrollButton from "./components/ScrollButton";
 
 const App = () => {
   return (
-    <main className="font-josefin min-h-screen bg-background text-white">
+    <main className="min-h-screen bg-background font-josefin text-white">
       <Navbar />
       <Hero />
       <About />
@@ -18,6 +20,8 @@ const App = () => {
       <Guide />
       <FAQ />
       <Footer />
+      <Toaster />
+      <ScrollButton />
     </main>
   );
 };

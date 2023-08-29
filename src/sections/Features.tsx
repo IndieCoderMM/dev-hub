@@ -15,15 +15,13 @@ const Features = () => {
         informed decisions and achieve your financial goals.
       </p>
       {/* Key features grid */}
-      <motion.div
-        variants={staggerContainer(0.5, 0)}
-        initial="hidden"
-        whileInView="show"
-        className="mt-16 grid grid-cols-1 gap-12 xl:grid-cols-3"
-      >
+      <div className="mt-16 grid grid-cols-1 gap-12 xl:grid-cols-3">
         {KeyFeatures.map((feature, index) => (
           <motion.div
             variants={fadeIn("up", "tween", 0.3 * index, 0.5)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
             className="flex flex-col items-center gap-4 rounded-xl p-4 text-center"
             key={feature.title}
           >
@@ -40,7 +38,7 @@ const Features = () => {
             <p className="text-center">{feature.description}</p>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

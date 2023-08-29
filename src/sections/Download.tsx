@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GooglePlay, Apple } from "@/assets/icons";
 import { SocialLinks } from "@/constants";
-import { sphereVariant, staggerContainer } from "@/lib/motion";
+import { fadeIn, sphereVariant, staggerContainer } from "@/lib/motion";
 import { CommunityImg } from "@/assets/images";
 
 const Download = () => {
@@ -17,7 +17,16 @@ const Download = () => {
           className="h-full w-auto object-contain"
         />
       </div>
-      <div className="w-full space-y-14 lg:w-[80%]">
+      <motion.div
+        variants={fadeIn("up", "tween", 0.2, 0.5)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{
+          once: false,
+          amount: 0.25,
+        }}
+        className="w-full space-y-14 lg:w-[80%]"
+      >
         <h2 className="text-4xl font-bold uppercase">
           Get CoinTrackr and join our community
         </h2>
@@ -77,7 +86,7 @@ const Download = () => {
             </div>
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
