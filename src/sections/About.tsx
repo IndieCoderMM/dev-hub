@@ -16,7 +16,7 @@ const About = () => {
         styles="text-center"
       />
       <p className="mt-10 text-center leading-loose">
-        Taking control of your finances shouldn't feel overwhelming. CoinTrackr
+        Taking control of your finances shouldn't feel overwhelming. Billio
         makes expense tracking and budget management easy.
       </p>
       {/* Services grid */}

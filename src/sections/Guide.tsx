@@ -11,7 +11,7 @@ const Guide = () => {
       <div className="max-container space-y-8">
         <h2 className="text-center text-4xl font-bold">Here's how it works</h2>
         <p className="text-center leading-loose">
-          CoinTrackr is the only app you need to manage your finances.
+          Billio is the only app you need to manage your finances.
         </p>
         {/* Steps grid */}
         <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">

@@ -59,7 +59,7 @@ const Navbar = () => {
       {/* Main nav */}
       <div className="max-container mx-auto flex items-center justify-between gap-4">
         <h1 className="text-lg font-bold uppercase lg:text-3xl">
-          <a href="/">CoinTrackr</a>
+          <a href="/">Billio</a>
         </h1>
         <nav className="hidden items-center gap-4 text-xl lg:flex">
           <ul className="flex items-center justify-center gap-2 lg:gap-8">

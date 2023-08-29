@@ -28,7 +28,7 @@ const Download = () => {
         className="w-full space-y-14 lg:w-[80%]"
       >
         <h2 className="text-4xl font-bold uppercase">
-          Get CoinTrackr and join our community
+          Get Billio and join our community
         </h2>
         {/* socials icons */}
         <motion.ul

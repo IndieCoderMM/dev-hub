@@ -10,13 +10,13 @@ const Hero = () => {
     <section className="padding-x hero-gradient relative min-h-screen bg-background py-20 lg:pt-40 xl:min-h-[90vh]">
       <div className="max-container mx-auto grid place-items-center xl:grid-cols-2">
         <div className="padding-y flex flex-1 flex-col justify-center gap-10">
-          <h1 className="text-5xl font-bold lg:text-7xl">
+          <h2 className="text-5xl font-bold lg:text-7xl">
             AI-Powered Expense Tracker App
-          </h1>
-          <h2 className="text-2xl leading-relaxed">
+          </h2>
+          <h3 className="text-2xl leading-relaxed">
             Simplify Expense Management, Predict Spending Trends, and Achieve
             Financial Goals Effortlessly.
-          </h2>
+          </h3>
           {/* Download on google play button with outline rounded border */}
           <div className="flex flex-col items-start gap-4 lg:flex-row">
             <button

@@ -100,7 +100,7 @@ export const Services = [
     title: "Anytime, Anywhere",
     image: Service03,
     description:
-      "Access CoinTrackr from your smartphone or computer. Manage your finances on the go and have your data synchronized across devices.",
+      "Access Billio from your smartphone or computer. Manage your finances on the go and have your data synchronized across devices.",
   },
 ];
 
@@ -130,12 +130,12 @@ export const KeyFeatures = [
 export const GuideSteps = [
   {
     title: "Sign Up",
-    description: "Create your CoinTrackr account in seconds.",
+    description: "Create your Billio account in seconds.",
     image: VerifiedAccount,
   },
   {
     title: "Connect your accounts",
-    description: "Link your bank and credit card accounts to CoinTrackr.",
+    description: "Link your bank and credit card accounts to Billio.",
     image: AtmCard,
   },
   {
@@ -155,28 +155,28 @@ export const GuideSteps = [
 // FAQ questions and answers
 export const FAQ = [
   {
-    question: "How do I get started with CoinTrackr?",
+    question: "How do I get started with Billio?",
     answer:
-      "Getting started with CoinTrackr is easy! Simply download the app from the App Store or Play Store, create an account, and follow the on-screen prompts to link your bank and credit card accounts. You can also manually enter cash expenses. Once set up, start tracking your expenses effortlessly.",
+      "Getting started with Billio is easy! Simply download the app from the App Store or Play Store, create an account, and follow the on-screen prompts to link your bank and credit card accounts. You can also manually enter cash expenses. Once set up, start tracking your expenses effortlessly.",
   },
   {
-    question: "Is my financial data safe with CoinTrackr?",
+    question: "Is my financial data safe with Billio?",
     answer:
-      "Absolutely. We take data security seriously. CoinTrackr uses state-of-the-art encryption to protect your financial information. Your data is stored securely, and we never share it with third parties.",
+      "Absolutely. We take data security seriously. Billio uses state-of-the-art encryption to protect your financial information. Your data is stored securely, and we never share it with third parties.",
   },
   {
-    question: "Can I use CoinTrackr on multiple devices?",
+    question: "Can I use Billio on multiple devices?",
     answer:
-      "Yes, you can. CoinTrackr is designed to be flexible. You can access your account and sync your data across multiple devices, whether it's your smartphone or computer. Your financial information is always up to date.",
+      "Yes, you can. Billio is designed to be flexible. You can access your account and sync your data across multiple devices, whether it's your smartphone or computer. Your financial information is always up to date.",
   },
   {
-    question: "Does CoinTrackr offer customer support?",
+    question: "Does Billio offer customer support?",
     answer:
-      "Absolutely. Our customer support team is available 24/7 to assist you with any questions or issues you may have. Feel free to reach out to us via email at support@cointrackrapp.com or through our in-app help center.",
+      "Absolutely. Our customer support team is available 24/7 to assist you with any questions or issues you may have. Feel free to reach out to us via email at support@billioapp.com or through our in-app help center.",
   },
   {
     question: "What if I need help with budgeting or financial advice?",
     answer:
-      "CoinTrackr's Predictive Budgeting feature provides personalized budget recommendations based on your spending habits and financial goals. If you need further assistance, you can also explore our in-app financial insights or contact our support team for guidance.",
+      "Billio's Predictive Budgeting feature provides personalized budget recommendations based on your spending habits and financial goals. If you need further assistance, you can also explore our in-app financial insights or contact our support team for guidance.",
   },
 ];

@@ -52,7 +52,7 @@ const Footer = () => {
           </a>
           <Separator orientation="vertical" />
           <a
-            href="mailto:support@cointrackrapp.com"
+            href="mailto:support@billioapp.com"
             className="text-xl transition-colors hover:text-accent"
           >
             Contact
@@ -89,7 +89,7 @@ const Footer = () => {
       <Separator />
       <div className="max-container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row">
         <p className="text-center text-lg">
-          Copyright &copy; {new Date().getFullYear()} CoinTrackr. All rights
+          Copyright &copy; {new Date().getFullYear()} Billio. All rights
           reserved.
         </p>
         <div className="flex h-5 items-center justify-center gap-4">
