@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { KeyFeatures } from "@/constants";
-import { fadeIn, staggerContainer } from "@/lib/motion";
+import { fadeIn } from "@/lib/motion";
 import TitleText from "@/components/TitleText";
 
 const Features = () => {
