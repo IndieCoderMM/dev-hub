@@ -9,7 +9,12 @@ const Hero = () => {
   return (
     <section className="padding-x hero-gradient relative min-h-screen bg-background py-20 lg:pt-40 xl:min-h-[90vh]">
       <div className="max-container mx-auto grid place-items-center xl:grid-cols-2">
-        <div className="padding-y flex flex-1 flex-col justify-center gap-10">
+        <motion.div
+          variants={fadeIn("right", "tween", 0.2, 0.5)}
+          initial="hidden"
+          animate="show"
+          className="padding-y flex flex-1 flex-col justify-center gap-10"
+        >
           <h2 className="text-5xl font-bold lg:text-7xl">
             AI-Powered Expense Tracker App
           </h2>
@@ -41,20 +46,30 @@ const Hero = () => {
               </div>
             </button>
           </div>
-        </div>
+        </motion.div>
         {/* Image */}
-        <motion.div
-          variants={fadeIn("left", "tween", 0.2, 0.85)}
-          initial="hidden"
-          whileInView="show"
-          className="hidden xl:block"
-        >
-          <img
+        <div className="hidden xl:block">
+          {/* Image floating animations */}
+          <motion.img
+            variants={{
+              floating: {
+                y: [0, 10, 0],
+                transition: {
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut",
+                  },
+                },
+              },
+            }}
+            animate="floating"
             src={HeroImg}
             alt="Hero"
             className="h-auto w-full object-cover"
           />
-        </motion.div>
+        </div>
       </div>
       {/* Metric grid with four columns */}
       <motion.div
