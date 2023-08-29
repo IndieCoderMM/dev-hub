@@ -3,18 +3,12 @@ import { GooglePlay, Apple } from "@/assets/icons";
 import { HeroImg } from "@/assets/images";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import { Metrics } from "@/constants";
-import { fadeIn } from "@/lib/motion";
 
 const Hero = () => {
   return (
     <section className="padding-x hero-gradient relative min-h-screen bg-background py-20 lg:pt-40 xl:min-h-[90vh]">
       <div className="max-container mx-auto grid place-items-center xl:grid-cols-2">
-        <motion.div
-          variants={fadeIn("right", "tween", 0.2, 0.5)}
-          initial="hidden"
-          animate="show"
-          className="padding-y flex flex-1 flex-col justify-center gap-10"
-        >
+        <div className="padding-y flex flex-1 flex-col justify-center gap-10">
           <h2 className="text-5xl font-bold lg:text-7xl">
             AI-Powered Expense Tracker App
           </h2>
@@ -46,25 +40,11 @@ const Hero = () => {
               </div>
             </button>
           </div>
-        </motion.div>
+        </div>
         {/* Image */}
         <div className="hidden xl:block">
           {/* Image floating animations */}
-          <motion.img
-            variants={{
-              floating: {
-                y: [0, 10, 0],
-                transition: {
-                  y: {
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                  },
-                },
-              },
-            }}
-            animate="floating"
+          <img
             src={HeroImg}
             alt="Hero"
             className="h-auto w-full object-cover"
