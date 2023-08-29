@@ -3,6 +3,7 @@ import { GooglePlay, Apple } from "@/assets/icons";
 import { HeroImg } from "@/assets/images";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import { Metrics } from "@/constants";
+import { fadeIn } from "@/lib/motion";
 
 const Hero = () => {
   return (
@@ -42,14 +43,20 @@ const Hero = () => {
           </div>
         </div>
         {/* Image */}
-        <div className="hidden xl:block">
-          {/* Image floating animations */}
+        <motion.div
+          variants={fadeIn("left", "tween", 0.2, 0.75)}
+          initial="hidden"
+          animate="show"
+          className="hidden xl:block"
+        >
           <img
             src={HeroImg}
             alt="Hero"
+            width={768}
+            height={709}
             className="h-auto w-full object-cover"
           />
-        </div>
+        </motion.div>
       </div>
       {/* Metric grid with four columns */}
       <motion.div

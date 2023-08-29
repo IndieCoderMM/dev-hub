@@ -31,6 +31,7 @@ const Footer = () => {
               type="email"
               placeholder="Your email"
               className="flex-1 bg-transparent text-lg outline-none"
+              required
             />
             <button
               type="submit"
