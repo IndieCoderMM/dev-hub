@@ -42,6 +42,7 @@ const ScrollButton = () => {
       whileHover="hover"
       animate={controls}
     >
+      <span className="sr-only">Scroll to top</span>
       <ArrowBigUpDashIcon className="h-8 w-8 lg:h-14 lg:w-14" />
     </motion.button>
   );

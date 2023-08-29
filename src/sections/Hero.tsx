@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
         {/* Image */}
         <motion.div
-          variants={fadeIn("up", "tween", 0.3, 0.75)}
+          variants={fadeIn("left", "tween", 0.2, 0.85)}
           initial="hidden"
           whileInView="show"
           className="hidden xl:block"
@@ -71,9 +71,9 @@ const Hero = () => {
         }}
         viewport={{
           once: true,
-          amount: 0.25,
+          amount: 0.5,
         }}
-        className="bottom-0 left-1/2 mx-auto mt-20 grid gap-4 rounded-md bg-secondary/50 p-4 lg:absolute lg:w-[80%] lg:-translate-x-1/2 lg:translate-y-1/2 lg:grid-cols-4 lg:bg-primary lg:py-8"
+        className="bottom-0 left-1/2 mx-auto grid gap-4 rounded-md bg-secondary/50 p-4 lg:absolute lg:w-[80%] lg:-translate-x-1/2 lg:translate-y-1/2 lg:grid-cols-4 lg:bg-primary lg:py-8"
       >
         {Metrics.map((metric, index) => (
           <div
