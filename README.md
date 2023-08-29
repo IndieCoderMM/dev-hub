@@ -7,7 +7,7 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 
 
-## Visit [Billio - AI-Powered Expense Tracker App](https://billio-app.onrender.com/) 🚀
+## 🚀 Visit [Billio - AI-Powered Expense Tracker App](https://billio-app.onrender.com/) 
 
 ![Project Screenshot](screenshot.png)
 

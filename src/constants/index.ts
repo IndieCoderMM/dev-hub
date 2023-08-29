@@ -62,22 +62,22 @@ export const Metrics = [
 export const SocialLinks = [
   {
     title: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://linkedin.com/in/hthantoo",
     icon: FacebookIcon,
   },
   {
     title: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://linkedin.com/in/hthantoo",
     icon: InstagramIcon,
   },
   {
     title: "Linkedin",
-    href: "https://www.linkedin.com/",
+    href: "https://linkedin.com/in/hthantoo",
     icon: LinkedinIcon,
   },
   {
     title: "Github",
-    href: "https://github.com/",
+    href: "https://github.com/indiecodermm",
     icon: GithubIcon,
   },
 ];
