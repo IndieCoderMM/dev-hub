@@ -11,6 +11,7 @@ const LanguageSelect = ({ languages }: { languages: string[] }) => {
     <Select defaultValue={languages[0]}>
       <SelectTrigger className="w-fit border-none bg-transparent uppercase">
         <SelectValue />
+        <span className="sr-only">Select Language</span>
       </SelectTrigger>
       <SelectContent>
         {languages.map((language, index) => (

@@ -35,7 +35,12 @@ const About = () => {
               key={service.title}
             >
               <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center">
-                <img src={service.image} alt={service.title} />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="flex flex-col text-center xl:text-left">
                 <h3 className="mt-8 text-2xl font-bold xl:mt-0">
